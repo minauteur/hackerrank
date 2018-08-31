@@ -46,7 +46,16 @@ function cut(arr) {
             num_cuts++
         }
     }
-
+    //     Since--for ths question at least--we never
+    // want to return an empty array ("undefined" by value), 
+    // we push the cut number before returning
+    // so it can be retrieved outside of this context when we   
+    // call .pop() in the parent function.
+    //    This allows us to get the last number of cuts
+    // before the while condition returns false. Otherwise, 
+    // the condition would false too soon, ending the loop
+    // before we had the chance to store the number
+    // of cuts required in the final round.
     arr = arr.filter(e => e > 0);
     arr.push(num_cuts);
     return arr;
