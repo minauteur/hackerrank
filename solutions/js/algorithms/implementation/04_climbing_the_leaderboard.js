@@ -42,7 +42,7 @@ function climbingLeaderboard(scores, alice) {
     for (let score of alice) {
         //since we know alice's score only increases after each round,
         //we start begin by checking the lower bounds
-        //to do this--because know our values are unique (and sorted)--
+        //to do this--because we know our values are unique (and sorted)--
         //we can just reference score_set[score_set.length-1] in
         //order to check the score against the lowest in the field.
         //we can then check index 0 for the high, similarly.
@@ -68,16 +68,16 @@ function climbingLeaderboard(scores, alice) {
         //scores, we can iterate over the scores in the set in 
         //ascending order to most efficiently calculate alice's rank
         else {
-            //since we .pop() elements from the score set like a stack
-            //and pop doesn't affect the .length property, we'll create
-            //a pointer to decrement it on each call to .pop() manually
-            //since we'll want to re-check the length of the applicable
-            //set of scores on each loop, we'll initialize that here.  
+            //because we .pop() elements from the score set like a stack
+            //and .pop() doesn't affect the .length property, we'll create
+            //a pointer to decrement the .length property on each call to .pop() manually.
+            //We'll also want to re-check the set of applicable
+            //scores on each loop for updating length, so we'll initialize that here.  
             let len_ptr = score_set.length;
             //while alice's score is more than or equal to the 
             //last score added to the "stack", we'll remove items, 
             //decrementing her rank at the same time via the pointer;
-            //IMPORTANT => we can't use "low" here, because 'let' 
+            //IMPORTANT: we can't use "low" here, because 'let' 
             //is block-specific in scope, so we need to refer to the last
             //value in the array explicitly upon each check to make sure we're
             //looking in the right place
