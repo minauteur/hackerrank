@@ -34,7 +34,7 @@ function minimumNumber(n, pass) {
         .map(r => !r.test(pass))
         .filter(Boolean).length
     // we then take the larger value between either the length of c
-    // or else the difference between the required length of 6
+    // or the difference between the required length of 6
     // and the given password. Because we are only asked for the 
     // "minimum" characters to add, we can assume any characters
     // added will satisfy remaining criteria as densely as possible.
