@@ -1,4 +1,5 @@
 //https://www.hackerrank.com/challenges/making-candies/problem
+//machines, workers, cost (per worker or machine), and number of candies to produce
 function minimumPasses(m, w, p, n) {
     let pass = 0,
         min = Math.ceil(n / (m * w)),
