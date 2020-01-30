@@ -1,13 +1,16 @@
 //https://www.hackerrank.com/challenges/the-time-in-words/problem
 function timeInWords(h, m) {
     return m == 0 ? getHours(h) + " o' clock"
-    : m > 30 ? m === 45 ? "quarter to " + getHours(h+1)
-    : m === 59 ? "one minute to" + getHours(h+1) 
-    : getMinutes(60-m) + " minutes to " + getHours(h+1)
-    : m < 30 ? m === 15 ? "quarter past " + getHours(h)
-    : m === 1 ? "one minute past " + getHours(h) 
-    : getMinutes(m) + " minutes past " + getHours(h) 
-    : m === 30 ? "half past " + getHours(h): "";
+        : m < 30 ?
+            m === 15 ? "quarter past " + getHours(h)
+            : m === 1 ? "one minute past " + getHours(h)
+            : getMinutes(m) + " minutes past " + getHours(h) 
+        : m === 30 ? "half past " + getHours(h) 
+        : m > 30 ?
+            m === 45 ? "quarter to " + getHours(h + 1)
+            : m === 59 ? "one minute to" + getHours(h + 1)
+            : getMinutes(60 - m) + " minutes to " + getHours(h + 1)
+     : "";
 }
 function getHours(h) {
     return h === 1 ? "one"
