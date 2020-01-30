@@ -16,7 +16,6 @@ function abbreviation(a, b) {
                 if (!upperCase) dp[i][0] = true;
                 else dp[i][0] = false;
             }
-            
         }
         for (let i = 1; i <= a.length; i++){
             for (let j = 1; j <= b.length; j++){
@@ -27,7 +26,6 @@ function abbreviation(a, b) {
             }
         }
         return dp[a.length][b.length];
-        
     }
     function isUpperCase(b) {
         return b.codePointAt(0) <= 90 && b.codePointAt(0) >= 65;
