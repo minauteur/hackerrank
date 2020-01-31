@@ -18,7 +18,5 @@ boolean check(Node node, int min, int max) {
     } if (node.data<= min || node.data >= max) {
         return false;
     }
-        return check(node.left, min, node.data) && check(node.right, node.data, max);
-    
-    
+        return check(node.left, min, node.data) && check(node.right, node.data, max);  
 }
