@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem
 function processData(input) {
     var n = parseInt(input);
     console.log(fibonacci(n));
@@ -25,6 +26,4 @@ function fibonacci(n) {
         fibs.push(next);
     }
     return fibs[fibs.length - 1];
-
-
 }

@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/abbr/problem
+
 function abbreviation(a, b) {
     return LCS(a, b) ? "YES" : "NO";
     function LCS(a, b) {

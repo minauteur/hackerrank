@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/challenges/crush/problem
 function arrayManipulation(n, queries) {
     let res = [];
     let sum = 0;

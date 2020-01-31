@@ -1,4 +1,4 @@
-//https://www.hackerrank.com/challenges/between-two-sets/problem
+// https://www.hackerrank.com/challenges/between-two-sets/problem
 
 function getTotalX(a, b) {
     return [...new Array(Math.floor(gcd(b) / lcm(a)))]

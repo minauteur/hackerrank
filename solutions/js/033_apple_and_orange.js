@@ -1,6 +1,5 @@
-//https://www.hackerrank.com/challenges/apple-and-orange/problem
+// https://www.hackerrank.com/challenges/apple-and-orange/problem
 
-// Complete the countApplesAndOranges function below.
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
     let apple_len = {
         min: s - a,
